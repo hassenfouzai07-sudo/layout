@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Industriel - Visualisation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>📍 Layout Industriel</h1>
+            <p>Visualisation interactive de la répartition des machines</p>
+        </header>
+
+        <div class="controls">
+            <input type="text" id="searchInput" placeholder="🔍 Rechercher une machine (ex: TN-CM01)">
+            <div class="control-buttons">
+                <button id="zoomInBtn" class="btn btn-primary">🔍+ Zoom+</button>
+                <button id="zoomOutBtn" class="btn btn-primary">🔍- Zoom-</button>
+                <button id="resetBtn" class="btn btn-secondary">↺ Réinitialiser</button>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <div class="canvas-wrapper">
+                <svg id="layoutCanvas"></svg>
+            </div>
+
+            <div class="info-panel">
+                <h3>ℹ️ Détails de la machine</h3>
+                <div id="infoContent" class="info-content">
+                    <p>Sélectionnez une machine pour voir les détails</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="stats">
+            <div class="stat-card">
+                <span class="stat-label">Machines Classiques (CM)</span>
+                <span class="stat-value">38</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Croiseuses (CR)</span>
+                <span class="stat-value">45</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Bobineuses (WM)</span>
+                <span class="stat-value">55</span>
+            </div>
+            <div class="stat-card">
+                <span class="stat-label">Bobines (TW)</span>
+                <span class="stat-value">18</span>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
